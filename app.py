@@ -13,12 +13,13 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.decomposition import PCA
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from sklearn.preprocessing import StandardScaler
-
+scaler = StandardScaler()
 
 
 app=Flask(__name__)
 ## Load the Random Forest Model
 randomforestmodel=pickle.load(open('randomforestmodel.pkl','rb'))
+scalar=pickle.load(open('scaling.pkl','rb'))
 
 @app.route('/')
 def home():
