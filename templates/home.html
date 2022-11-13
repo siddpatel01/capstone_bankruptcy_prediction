@@ -9,49 +9,20 @@
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-
 </head>
 
 <body>
  <div class="login">
-	<h1>Company Bankruptcy Prediction</h1>
+    <h1 style="border:2px solid Tomato;"><center>Company Bankruptcy Prediction</center></h1>
+     <h6>Description</h6>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-        <input type="text" name="Attr1" placeholder="total liabilities / total assets" required="required" /><br>
-        <input type="text" name="Attr3" placeholder="working capital / total assets" required="required" /><br>
-        <input type="text" name="Attr4" placeholder="current assets / short-term liabilities" required="required" /><br>
-        <input type="text" name="Attr5" placeholder="(cash + short-term securities + receivables - short-term liabilities) / (operating expenses - depreciation) * 365" required="required" /><br>
-        <input type="text" name="Attr8" placeholder="book value of equity / total liabilities" required="required" /><br>
-        <input type="text" name="Attr9" placeholder="sales / total assets" required="required" /><br>
-        <input type="text" name="Attr11" placeholder="(gross profit + extraordinary items + financial expenses) / total assets" required="required" /><br>
-        <input type="text" name="Attr12" placeholder="gross profit / short-term liabilities" required="required" /><br>
-        <input type="text" name="Attr13" placeholder="(gross profit + depreciation) / sales" required="required" /><br>
-        <input type="text" name="Attr15" placeholder="(total liabilities * 365) / (gross profit + depreciation)" required="required" /><br>
-        <input type="text" name="Attr16" placeholder="(gross profit + depreciation) / total liabilities" required="required" /><br>
-        <input type="text" name="Attr19" placeholder="gross profit / sales" required="required" /><br>
-        <input type="text" name="Attr20" placeholder="(inventory * 365) / sales" required="required" /><br>
-        <input type="text" name="Attr21" placeholder="sales (n) / sales (n-1)" required="required" /><br>
-        <input type="text" name="Attr24" placeholder="gross profit (in 3 years) / total assets" required="required" /><br>
-        <input type="text" name="Attr27" placeholder="profit on operating activities / financial expenses" required="required" /><br>
-        <input type="text" name="Attr28" placeholder="working capital / fixed assets" required="required" /><br>
-        <input type="text" name="Attr29" placeholder="logarithm of total assets" required="required" /><br>
-        <input type="text" name="Attr30" placeholder="(total liabilities - cash) / sales" required="required" /><br>
-        <input type="text" name="Attr32" placeholder="(current liabilities * 365) / cost of products sold" required="required" /><br>
-        <input type="text" name="Attr33" placeholder="operating expenses / short-term liabilities" required="required" /><br>
-        <input type="text" name="Attr34" placeholder="operating expenses / total liabilities" required="required" /><br>
-        <input type="text" name="Attr36" placeholder="total sales / total assets" required="required" /><br>
-        <input type="text" name="Attr37" placeholder="(current assets - inventories) / long-term liabilities" required="required" /><br>
-        <input type="text" name="Attr41" placeholder="total liabilities / ((profit on operating activities + depreciation) * (12/365))" required="required" /><br>
-        <input type="text" name="Attr45" placeholder="net profit / inventory" required="required" /><br>
-        <input type="text" name="Attr50" placeholder="current assets / total liabilities" required="required" /><br>
-        <input type="text" name="Attr51" placeholder="short-term liabilities / total assets" required="required" /><br>
-        <input type="text" name="Attr53" placeholder="equity / fixed assets" required="required" /><br>
-        <input type="text" name="Attr55" placeholder="working capital" required="required" /><br>
-        <input type="text" name="Attr57" placeholder="(current assets - inventory - short-term liabilities) / (sales - gross profit - depreciation)" required="required" /><br>
-        <input type="text" name="Attr59" placeholder="long-term liabilities / equity" required="required" /><br>
-        <input type="text" name="Attr61" placeholder="sales / receivables" required="required" /><br>
-        <input type="text" name="Attr64" placeholder="sales / fixed assets" required="required" /><br>
+        <input type="text" name="Attr12" placeholder="gross profit / short-term liabilities" required="required" size="100"/><br>
+        <input type="text" name="Attr28" placeholder="working capital / fixed assets" required="required" size="100" /><br>
+        <input type="text" name="Attr45" placeholder="net profit / inventory" required="required" size="100" /><br>
+        <input type="text" name="Attr34" placeholder="operating expenses / total liabilities" required="required" size="100" /><br>
+        <input type="text" name="Attr13" placeholder="(gross profit + depreciation) / sales" required="required" size="100" /><br>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
@@ -62,6 +33,11 @@
 
  </div>
  {{prediction_text}}
-
+<style>
+      body {
+      background-color: #212121;
+      color: grey
+      }
+   </style>
 </body>
 </html>
