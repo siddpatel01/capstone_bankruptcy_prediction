@@ -13,16 +13,17 @@
 
 <body>
  <div class="login">
-    <h1 style="border:2px solid Tomato;"><center>Company Bankruptcy Prediction</center></h1>
-     <h6>Description</h6>
+    <h1 style="border:2px solid black;"><center>Company Bankruptcy Prediction</center></h1>
+     <h5>The Wall Street crash of 1929 resulted in the creation of the United States Securities and Exchange Commission (SEC) in which its primary purpose was the following: facilitate capital formation, protect investors, and maintain fair and efficient markets. In order to achieve its mandate, SEC required publicly traded companies to submit quarterly and annual reports which are composed of financial statements along with management discussion and analysis. With the given financial metrics, the following app will predict whether or not a company will go bankrupt. </h5>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-        <input type="text" name="Attr12" placeholder="gross profit / short-term liabilities" required="required" size="100"/><br>
-        <input type="text" name="Attr28" placeholder="working capital / fixed assets" required="required" size="100" /><br>
-        <input type="text" name="Attr45" placeholder="net profit / inventory" required="required" size="100" /><br>
-        <input type="text" name="Attr34" placeholder="operating expenses / total liabilities" required="required" size="100" /><br>
-        <input type="text" name="Attr13" placeholder="(gross profit + depreciation) / sales" required="required" size="100" /><br>
+        <h4> Please Input Ratios Below: </h4>
+        <input type="text" name="Attr12" placeholder="Gross Profit / Short-Term Liabilities" required="required" size="100"/><br>
+        <input type="text" name="Attr28" placeholder="Working Capital / Fixed Assets" required="required" size="100" /><br>
+        <input type="text" name="Attr45" placeholder="Net Profit / Inventory" required="required" size="100" /><br>
+        <input type="text" name="Attr34" placeholder="Operating Expenses / Total Liabilities" required="required" size="100" /><br>
+        <input type="text" name="Attr13" placeholder="(Gross Profit + Depreciation) / Sales" required="required" size="100" /><br>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
@@ -35,8 +36,8 @@
  {{prediction_text}}
 <style>
       body {
-      background-color: #212121;
-      color: grey
+      background-color:#FFDEAD;
+      color: black
       }
    </style>
 </body>
