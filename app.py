@@ -14,6 +14,11 @@ scalar=pickle.load(open('scalingreduced.pkl','rb'))
 def home():
     return render_template('home.html')
 
+@app.route('/resume')
+def resume_page():
+    return render_template('resume.html')
+
+
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
     data=request.json['data']
